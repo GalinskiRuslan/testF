@@ -42,7 +42,7 @@ export const RegisterForm = ({ closeModal }: Props) => {
             <button type="submit">Зарегистрироваться</button>
             <p style={{ color: "red", opacity: `${error}` }}>{errorText}</p>
         </form>
-        {error.response?.data ? <p style={{ color: "red" }}>{error.response.data}</p> : null}
+        {error.response?.data ? <p style={{ color: "red" }}>Возникла ошибка, повторите попытку</p> : null}
     </>
     )
 }
