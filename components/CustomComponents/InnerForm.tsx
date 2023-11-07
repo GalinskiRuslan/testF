@@ -7,7 +7,7 @@ type Props = {
     closeModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 export const InnerForm = ({ closeModal }: Props) => {
-    const { isLoading, isAuth } = useSelector<any, any>(state => state.login);
+    const { isLoading, isAuth, error } = useSelector<any, any>(state => state.login);
     const dispatch = useDispatch<AppDispatch>();
     const [userMail, setUserMail] = React.useState("")
     const [password, setPassword] = React.useState("")
@@ -21,12 +21,14 @@ export const InnerForm = ({ closeModal }: Props) => {
         return (<p>Loading....</p>)
     }
     else if (isAuth == false) {
-        return (
-            <form onSubmit={(e) => { e.preventDefault(); dispatch(fetchLogin({ user_email: userMail, password })) }}>
-                <input type="text" placeholder='Введите почту' value={userMail} onChange={(e) => setUserMail(e.target.value)} />
-                <input type="password" placeholder='Введите пароль' value={password} onChange={(e) => setPassword(e.target.value)} />
-                <button type='submit'>Войти</button>
-            </form>
+        return (<>            <form onSubmit={(e) => { e.preventDefault(); dispatch(fetchLogin({ user_email: userMail, password })) }}>
+            <input type="text" placeholder='Введите почту' value={userMail} onChange={(e) => setUserMail(e.target.value)} />
+            <input type="password" placeholder='Введите пароль' value={password} onChange={(e) => setPassword(e.target.value)} />
+            <button type='submit'>Войти</button>
+            {error.response.data ? <p style={{ color: "red" }}>{error.response.data}</p> : null}
+        </form>
+
+        </>
         )
     }
 }

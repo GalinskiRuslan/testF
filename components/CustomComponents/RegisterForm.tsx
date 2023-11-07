@@ -2,18 +2,19 @@
 import { register } from '@/store/redusersRedux/loginReduser';
 import { AppDispatch } from '@/store/reduxStore';
 import React from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 type Props = {
     closeModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const RegisterForm = ({ closeModal }: Props) => {
+    const { isLoading, isAuth, error } = useSelector<any, any>(state => state.login);
     const [userMail, setUserMail] = React.useState("")
     const [password, setPassword] = React.useState("")
     const [repeatPassword, setRepeatPassword] = React.useState("")
     const [name, setName] = React.useState("")
-    const [error, setError] = React.useState(0)
+    const [errorS, setError] = React.useState(0)
     const [errorText, setErrorText] = React.useState("")
     const dispatch = useDispatch<AppDispatch>();
 
@@ -32,7 +33,7 @@ export const RegisterForm = ({ closeModal }: Props) => {
         }
     }
 
-    return (
+    return (<>
         <form onSubmit={(e) => { e.preventDefault(); clickRegister() }}>
             <input type="email" placeholder='Введите почту' value={userMail} onChange={(e) => setUserMail(e.target.value)} />
             <input type="password" placeholder='Введите пароль' value={password} onChange={(e) => setPassword(e.target.value)} />
@@ -41,5 +42,7 @@ export const RegisterForm = ({ closeModal }: Props) => {
             <button type="submit">Зарегистрироваться</button>
             <p style={{ color: "red", opacity: `${error}` }}>{errorText}</p>
         </form>
+        {error.response.data ? <p style={{ color: "red" }}>{error.response.data}</p> : null}
+    </>
     )
 }
