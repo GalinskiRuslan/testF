@@ -25,7 +25,7 @@ export const InnerForm = ({ closeModal }: Props) => {
             <input type="text" placeholder='Введите почту' value={userMail} onChange={(e) => setUserMail(e.target.value)} />
             <input type="password" placeholder='Введите пароль' value={password} onChange={(e) => setPassword(e.target.value)} />
             <button type='submit'>Войти</button>
-            {error.response.data ? <p style={{ color: "red" }}>{error.response.data}</p> : null}
+            {error.response?.data ? <p style={{ color: "red" }}>{error.response.data}</p> : null}
         </form>
 
         </>
