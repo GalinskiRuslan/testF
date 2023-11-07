@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Inter:wght@400;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Balsamiq Sans";
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+h6 {
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 64px;
+  font-weight: 700;
+}
+html,
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1680px;
+}
+.header {
+  position: relative;
+  max-width: 1660px;
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 55;
+  margin: 0 auto;
+}
+.header ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.header ul a {
+  color: #2d2d2d;
+  font-size: 20px;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.header ul a li {
+  position: relative;
+}
+.header ul a li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #119ac7;
+  border-radius: 6px;
+  left: 0;
+  bottom: -6px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform.7s;
+}
+.header ul a li:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -37px;
+  margin-top: 20px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+footer {
+  position: absolute;
+  left: 0;
+  border-radius: 100px 100px 0px 0px;
+  background: #7151a2;
+  width: 100%;
+  padding: 40px;
+  margin-top: 230px;
+}
+.loader {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+}
+.loader:after,
+.loader:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 50%;
+  background: #ff3d00;
+  animation: spin 1s linear infinite;
+  transform-origin: 0px 100%;
+}
+.loader:before {
+  transform-origin: 0 50%;
+  background: #2eb3c0;
+}
+.loader_cont {
+  padding-top: 180px;
+  text-align: center;
+}
+.overray {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background: rgb(0, 0, 0, 0.5);
+  z-index: 99;
+}
+.header-left_btn {
+  border: none;
+  cursor: pointer;
+  color: #2d2d2d;
+  font-size: 28px;
+  font-weight: 400;
+  border-radius: 85px;
+  background: #c8d565;
+  padding: 5px 20px;
+}
+.login_btn {
+  border: none;
+  cursor: pointer;
+  color: #2d2d2d;
+  font-size: 28px;
+  font-weight: 400;
+  border-radius: 85px;
+  background: #2eb3c0;
+  padding: 5px 20px;
+}
+.menu_btn {
+  position: relative;
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.menu_btn_span {
+  display: block;
+  width: 100%;
+  background: #7151a2;
+  height: 5px;
+  border-radius: 20px;
+}
+.menu_btn::before,
+.menu_btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #7151a2;
+  border-radius: 20px;
+}
+.menu_btn::before {
+  top: 0;
+}
+.menu_btn::after {
+  bottom: 0;
+}
+@media screen and (max-width: 1200px) {
+  .header ul a {
+    font-size: 14px;
+  }
+  h6 {
+    font-size: 48px;
+  }
+  .header-left_btn {
+    font-size: 18px;
+    padding: 4px 15px;
+  }
+  .login_btn {
+    font-size: 18px;
+    padding: 4px 15px;
+  }
+}
+@media screen and (max-width: 940px) {
+  .header {
+  }
+  .logo {
+    z-index: 99;
+  }
+  .header ul {
+    list-style: none;
+    display: block;
+    gap: 30px;
+    padding-top: 50px;
+  }
+  .header nav {
+    position: absolute;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    z-index: 100;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+  }
+  .header nav.active {
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+  .header ul a li {
+    margin: 15px 0;
+  }
+  .logo {
+    position: relative;
+    margin: 0;
+    left: auto;
+  }
+  .menu_btn {
+    display: block;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

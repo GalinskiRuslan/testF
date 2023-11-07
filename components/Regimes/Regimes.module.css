@@ -1,0 +1,40 @@
+.regime_unautaraiz {
+  text-align: center;
+  margin-top: 50px;
+}
+.item_card {
+  display: flex;
+  gap: 30px;
+}
+.regimeList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  margin-top: 50px;
+}
+.dataTime {
+  border-radius: 25px;
+  background: #7151a2;
+  color: #fff;
+  font-size: 64px;
+  font-weight: 700;
+  padding: 15px;
+  max-height: 120px;
+}
+.day {
+  font-size: 40px;
+  font-weight: 400;
+}
+.descr {
+  font-size: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .regimeList {
+    grid-template-columns: 1fr;
+    margin: 0 20px;
+    margin-top: 80px;
+  }
+  .item_card {
+    flex-direction: column;
+  }
+}

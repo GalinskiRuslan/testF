@@ -1,0 +1,309 @@
+.img {
+  width: 100%;
+  margin-top: -40px;
+}
+.mait_topsvg {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  bottom: 10%;
+}
+.mait_topsvg:hover > path {
+  fill: azure;
+}
+.top_container {
+  width: 100%;
+  position: relative;
+}
+.top_inner {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  max-width: 40%;
+}
+.top_inner {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 400;
+}
+.top_inner span {
+  font-size: 64px;
+}
+
+.top_inner button {
+  color: #2d2d2d;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 85px;
+  background: #c8d565;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-top: 20px;
+}
+.top_inner button:hover {
+  color: #000000;
+  background: #9ca650;
+  transition: 0.5s;
+}
+.lamp {
+  position: absolute;
+  left: 60%;
+  margin-top: 40px;
+}
+.secblock {
+  max-width: 1660px;
+  margin: 0 auto;
+  margin-top: 230px;
+}
+.secblock h6 {
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 64px;
+  font-weight: 700;
+}
+.about_cont {
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+}
+.about_item {
+  border-radius: 50px;
+  background: #7151a2;
+  padding: 40px;
+}
+.about_item_title {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+.about_item_text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+.flower {
+  position: absolute;
+  margin-top: 111px;
+  left: -1%;
+}
+.regime {
+  margin-top: 230px;
+}
+.nutrition {
+  margin-top: 230px;
+}
+.corona {
+  position: absolute;
+  margin-top: 120px;
+  left: 80%;
+}
+.candy {
+  position: absolute;
+  left: 0;
+  margin-top: -285px;
+}
+.icecream {
+  position: absolute;
+  right: 10%;
+}
+.methodical {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.methodical h6 {
+  margin-bottom: 50px;
+}
+.heart {
+  position: absolute;
+  right: 5%;
+}
+.starsvg {
+  position: absolute;
+  left: 5%;
+  margin-top: 220px;
+}
+.forgrand {
+  margin-top: 210px;
+  text-align: center;
+}
+.forgrand_img {
+  margin-top: 80px;
+}
+.baterfly {
+  position: absolute;
+  margin-top: 650px;
+  right: 5%;
+}
+.footer_container {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+}
+.footer_contact {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.footer_right_i {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+.footer_subtitle {
+  color: #f975c7;
+  font-size: 32px;
+  font-weight: 400;
+}
+.footer_text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+.footer_nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.footer_nav a {
+  color: #fbfbfb;
+  font-size: 20px;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.footer_nav a:hover {
+  color: #a9a9a9;
+  transition: 0.5s;
+}
+.footer_left {
+  width: 45%;
+}
+.footer_right_title {
+  color: #f975c7;
+  font-size: 64px;
+  font-weight: 400;
+}
+.footer_right_text {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .img {
+    margin-top: 0;
+  }
+  .top_inner {
+    font-size: 38px;
+  }
+  .top_inner span {
+    font-size: 42px;
+  }
+  .top_inner button {
+    font-size: 32px;
+  }
+  .secblock h6 {
+    font-size: 48px;
+  }
+  .about_item_title {
+    font-size: 36px;
+  }
+  .about_item_text {
+    font-size: 14px;
+  }
+  .forgrand_img {
+    width: 100%;
+  }
+  .footer_container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .footer_left {
+    width: 100%;
+  }
+  .about_cont {
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  .footer_right img {
+    width: 100%;
+  }
+  .footer_contact {
+    flex-direction: column;
+  }
+
+}
+@media screen and (max-width: 940px) {
+  .img {
+    margin-top: 0;
+  }
+  .footer_right img {
+    width: 100%;
+  }
+  .mait_topsvg {
+    display: none;
+  }
+  .top_inner button {
+    display: none;
+  }
+  .top_inner {
+    font-size: 24px;
+  }
+  .lamp {
+    margin-top: 0;
+    width: 42px;
+    height: 72px;
+  }
+  .secblock {
+    margin-top: 80px;
+  }
+  .top_inner {
+    font-size: 18px;
+  }
+  .top_inner span {
+    font-size: 18px;
+  }
+  .flower {
+    width: 58px;
+    height: 102px;
+    margin-top: 0;
+  }
+  .regime {
+    margin-top: 80px;
+  }
+  .corona {
+    left: 5%;
+    margin-top: 0;
+  }
+  .nutrition{
+    margin-top: 90px;
+  }
+  .candy {
+    display: none;
+  }
+  .icecream{
+    width: 45px;
+    height: 90px;
+  }
+  .heart{
+    margin-top: -90px;
+    width: 50px;
+    height: 53px;
+  }
+  .starsvg {
+    margin-top: 0;
+    width: 66px;
+    height: 66px;
+  }
+}

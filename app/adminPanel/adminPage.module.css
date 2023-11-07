@@ -1,0 +1,28 @@
+.warningText {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 32px;
+  font-weight: 600;
+}
+.admincont {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 0.2fr;
+  margin: 10px;
+  border-bottom: 1px solid #2d2d2d;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.admin {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 30px;
+  border: 1px solid #2d2d2d;
+}
+
+@media screen and (max-width: 700px) {
+  .admin {
+    max-width: 100%;
+
+  }
+}
