@@ -10,6 +10,8 @@ export interface LoginState {
   isLoading: boolean;
   error: any;
   isAuth: boolean;
+  loginEroor: any;
+  registerError: any;
 }
 
 const initalState: LoginState = {
@@ -23,6 +25,8 @@ const initalState: LoginState = {
     user_role: "",
   },
   isAuth: false,
+  loginEroor: "",
+  registerError: null,
 };
 export const fetchLogin = createAsyncThunk(
   "login/fetch",
@@ -98,18 +102,20 @@ export const loginSlice = createSlice({
     builder
       .addCase(fetchLogin.pending, (state) => {
         state.isLoading = true;
+        state.loginEroor = "";
         state.error = "";
       })
       .addCase(fetchLogin.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = "";
+        state.loginEroor = "";
         state.token = action.payload.token;
         state.user = action.payload.user;
         state.isAuth = true;
       })
       .addCase(fetchLogin.rejected, (state, action) => {
         state.isLoading = false;
-        state.error = action.payload;
+        state.loginEroor = action.payload;
       })
       .addCase(fetchCheckLogin.pending, (state) => {
         state.isLoading = true;
@@ -127,18 +133,18 @@ export const loginSlice = createSlice({
       })
       .addCase(register.pending, (state) => {
         state.isLoading = true;
-        state.error = "";
+        state.registerError = "";
       })
       .addCase(register.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.error = "";
+        state.registerError = "";
         state.user = action.payload.data;
         state.token = action.payload.token;
         state.isAuth = true;
       })
       .addCase(register.rejected, (state, action) => {
         state.isLoading = false;
-        state.error = action.payload;
+        state.registerError = action.payload;
       }),
 });
 

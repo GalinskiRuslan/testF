@@ -13,7 +13,7 @@ import { AppDispatch } from '@/store/reduxStore'
 export const Header = () => {
     const [visible, setVisible] = useState(false)
     const dispatch = useDispatch<AppDispatch>();
-    const { user, token, error, isLoading, isAuth } = useSelector<any, any>(state => state.login);
+    const { user, token, error, isLoading, isAuth, loginEroor } = useSelector<any, any>(state => state.login);
     const [menuToggler, setMenuToggler] = useState(false);
 
     useEffect(() => {

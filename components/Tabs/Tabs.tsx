@@ -13,6 +13,6 @@ export const Tabs = ({ items }: { items: any }) => {
 
 
         </div>
-        <div className={cl.nav}>{items.map((item: any, index: number) => (<div key={index}><button onClick={() => { setActiveTabs(index) }}>{item.buttonName}</button></div>))}</div>
+        <div className={cl.nav}>{items.map((item: any, index: number) => (<div key={index}><button className='login_btn' style={{ margin: '10px' }} onClick={() => { setActiveTabs(index) }}>{item.buttonName}</button></div>))}</div>
     </>)
 }

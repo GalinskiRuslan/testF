@@ -171,6 +171,12 @@ footer {
 .menu_btn::after {
   bottom: 0;
 }
+.input_login {
+  width: 100%;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 5px;
+}
 @media screen and (max-width: 1200px) {
   .header ul a {
     font-size: 14px;
